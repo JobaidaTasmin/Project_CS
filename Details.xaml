@@ -1,0 +1,76 @@
+﻿<Page
+    x:Class="FurnitureApp.Details"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FurnitureApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+        <TextBlock Text="Furniture Details" 
+                   FontWeight="SemiBold" 
+                   TextAlignment="Center" 
+                   FontFamily="Seque UI" 
+                   FontStyle="Italic" 
+                   TextLineBounds="Full"
+                   Foreground="OliveDrab" 
+                   FontStretch="Condensed"
+                   FontSize="50" 
+                   Padding="5 5 5 15"
+                   Margin="5 50 5 5"/>
+        <StackPanel Orientation="Horizontal" 
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top"
+                Margin="50">
+            <Border BorderBrush="LightCoral" 
+                                Width="451" Height="457"
+                                BorderThickness="3"
+                                CornerRadius="5"                                   
+                               Padding="5">
+                <Border BorderThickness="1"
+                                    CornerRadius="5"                                   
+                                    Padding="5"
+                
+                           >
+                    <Border.Background>
+                        <ImageBrush ImageSource="{Binding Image}" />
+                    </Border.Background>
+                </Border>
+            </Border>
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top" Height="454" Width="944">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="10">
+                    <TextBlock Text="ID: " FontSize="25" Margin="0,0,10, 0" Foreground="DarkCyan" FontWeight="Bold" Width="100" Height="40" />
+                    <TextBlock Text="{Binding Id}"  FontWeight="SemiBold"  FontSize="25"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="10, 5">
+                    <TextBlock Text="Name: "  FontSize="25"  Foreground="DarkCyan" FontWeight="Bold" Margin="0,0,10, 0" Width="100" Height="40" />
+                    <TextBlock Text="{Binding Name}"  FontSize="25"  />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="10, 5">
+                    <TextBlock Text="Price: "  FontSize="25"   Foreground="DarkCyan" FontWeight="Bold" Margin="0,0,10, 0" Width="176"  Height="40"/>
+                    <TextBlock Text="{Binding Price}"  FontSize="25"  />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="10, 5">
+                    <TextBlock Text="MakeDate: "  FontSize="25"  Foreground="DarkCyan" FontWeight="Bold" Margin="0,0,10, 0" Width="176" Height="40"/>
+                    <TextBlock Text="{Binding MakeDate}"  FontSize="25"  />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="10, 5">
+                    <TextBlock Text="Model: "  FontSize="25"  Foreground="DarkCyan" FontWeight="Bold" Margin="0,0,10, 0" Width="176" Height="40"/>
+                    <TextBlock Text="{Binding Model}"  FontSize="25"  />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="10, 5">
+                    <TextBlock Text="Guarantee: "  FontSize="25"  Foreground="DarkCyan" FontWeight="Bold" Margin="0,0,10, 0" Width="176" Height="40"/>
+                    <TextBlock Text="{Binding Guarantee}"  FontSize="25"  />
+                </StackPanel>
+
+
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+    <Page.TopAppBar>
+        <CommandBar>
+            <AppBarButton x:Name="back" Icon="Back" Click="back_Click" Content="Back"  />
+        </CommandBar>
+    </Page.TopAppBar>
+</Page>
